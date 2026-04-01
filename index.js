@@ -43,6 +43,9 @@ const db = {
   
 // Create the Express app & setup middlewares
 const app = express();
+app.get('/', (req, res) => {
+  res.send("Hello World!");
+});
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors({ origin: /http:\/\/(127(\.\d){3}|localhost)/}));
